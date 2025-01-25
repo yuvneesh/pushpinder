@@ -29,12 +29,16 @@ def calculate_average(list_of_numbers: List[Union[int, float]]) -> float:
     return total / len(list_of_numbers)
 
 
-# Demonstrating the benefit of using the Typing module
-# calculate_average returns a float.
-# Let's see what happens if we try to use string methods on its output.
-my_name = "Yuvneesh"
-average = calculate_average([1, 2, 3])
-a_string = my_name + average  # PyCharm highlights is due to unexpected type
+def benefits_of_typing() -> None:
+    """
+    Demonstrating the benefit of using the Typing module
+    calculate_average returns a float.
+    Let's see what happens if we try to use string methods on its output.
+    """
+
+    my_name = "Yuvneesh"
+    my_average = calculate_average([1, 2, 3])
+    a_string = my_name + my_average  # PyCharm highlights is due to unexpected type
 
 
 if __name__ == "__main__":
